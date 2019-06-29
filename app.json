@@ -1,22 +1,29 @@
 {
   "pages": [
+    "pages/xman/xman",
     "pages/temp/temp",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/xman/xman",
     "pages/way/way"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000100",
+    "navigationBarBackgroundColor": "#c21327",
     "navigationBarTitleText": "黑客帝国",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#ff0000",
     "borderStyle": "black",
     "list": [
+      {
+        "selectedIconPath": "img/tab-icon33.png",
+        "iconPath": "img/tab-icon3.png",
+        "pagePath": "pages/xman/xman",
+        "text": "X档案"
+      },
       {
         "selectedIconPath": "img/tab-icon44.png",
         "iconPath": "img/tab-icon4.png",
@@ -34,12 +41,6 @@
         "iconPath": "img/tab-icon2.png",
         "pagePath": "pages/way/way",
         "text": "足迹"
-      },
-      {
-        "selectedIconPath": "img/tab-icon33.png",
-        "iconPath": "img/tab-icon3.png",
-        "pagePath": "pages/xman/xman",
-        "text": "X档案"
       }
       
     ]

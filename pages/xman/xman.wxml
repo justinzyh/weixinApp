@@ -1,4 +1,100 @@
 <!--pages/xman/xman.wxml-->
-<view class='zyh-xman-container'>
-
-</view>
+ <component-topnav inner-title="{{title}}" is-show-back="false"></component-topnav> 
+<form reportSubmit bindsubmit="submitFormId">
+  <view class="header">
+    <view class="user" hoverClass="none">
+      <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image wx:if="{{userInfo.avatarUrl != 'undefined'}}" src="{{userInfo.avatarUrl}}"></image>
+           <image wx:if="{{userInfo.avatarUrl == 'undefined'}}" src="{{defaultAvatarUrl}}"></image>
+          <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+        </view>
+        <block wx:if="{{vip}}">
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+              <image src="/images/main/vip.png"></image>
+            </view>
+            <view class="vip_expires">vip到期时间：{{vip_time}}，
+              <button class="joinVip" bindtap='joinVip'>马上续费</button>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+            </view>
+            <view class="vip_expires" bindtap='joinVip'>您还不是VIP，
+              <span style="color:blue;">请充值</span>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <image src='../../img/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+  <!-- 功能列表 -->
+  <view class="nav">
+    <view bindtap="openPage" class="item" data-url="/pages/collect/collect" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-favor icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>我的收藏</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view bindtap="openPage" class="item" data-url="/pages/wallet/wallet" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-moneybag icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>我的钱包</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view bindtap="openPage" class="item" data-url="/pages/about/about" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-info icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>关于我们</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view bindtap="openPage" class="item" data-url="/pages/advice/advice" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-deit icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>意见反馈</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view class="item" bindtap='changeView'>
+      <view class='wallet'>
+        <text class='icon-settings icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>设置中心</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view class="item" formType="submit" hoverClass="none" openType="contact">
+      <view class='wallet'>
+        <text class='icon-service icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>联系客服</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+  </view>
+</form>
