@@ -1,0 +1,9 @@
+<!--index.wxml-->
+ <view class="header-container">
+      <image class='header-bg' src = '../../img/index-bg.jpg'></image>
+      <view class='userContent'>
+        <image bindtap='changePhotoImg' class="header-avatar" src="{  {userInfo.headUrl}}" ></image>
+        <text class="header-nickname">姓名</text>
+    
+      </view>
+    </view>

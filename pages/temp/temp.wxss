@@ -1,0 +1,43 @@
+/* pages/temp/temp.wxss */
+.zyh-temp-body{
+  padding: 20rpx 15rpx;
+  text-align: center;
+}
+.footer-wrapper{
+  position: absolute;
+  bottom: 0;
+  padding:10rpx;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+}
+.footer-wrapper .ft-item{
+  flex:1;
+  text-align: center;
+}
+.footer-wrapper button{
+  display: inline-block;
+  width: 120px;
+  height: 38px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  border-radius: 4rpx;
+  color: #fff;
+}
+.footer-wrapper .choose-btn{
+  background-color: #EC6149;
+  box-shadow: 0 0 1px 2px #eee inset;
+}
+.footer-wrapper .result-btn{
+  background-color: #87CEFA;
+  box-shadow: 0 0 1px 2px #eee inset;
+}
+.footer-wrapper .choosed-btn{
+  background-color: #FF552A;
+}
+.footer-wrapper .resulted-btn{
+  background-color: rgb(40, 128, 216);
+}

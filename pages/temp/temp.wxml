@@ -1,0 +1,18 @@
+<!--pages/temp/temp.wxml-->
+<view class='zyh-temp-container'>
+    <view class='zyh-temp-body'>
+      <view>
+        <image src="{{tempFilePaths}}"></image>
+      </view>
+    </view>
+    <view class='footer-wrapper'>
+      <view class='ft-item'>
+        <button class='choose-btn' hover-class='choosed-btn' bindtap='chooseImage'>
+          选取对象
+        </button>
+      </view>
+      <view class='ft-item'>
+        <button class='result-btn' hover-class='resulted-btn'>预览</button>
+      </view>
+    </view>
+</view>
